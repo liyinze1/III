@@ -1,7 +1,7 @@
-from serial import Serial
+import serial_test
 from time import sleep
 
-ser = Serial("/dev/ttyS0", 9600)    #Open port with baud rate
+ser = serial_test.Serial("/dev/ttyS0", 9600)    #Open port with baud rate
 while True:
     received_data = ser.read()
     sleep(0.03)
